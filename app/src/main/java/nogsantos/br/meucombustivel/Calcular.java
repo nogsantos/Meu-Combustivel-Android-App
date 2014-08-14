@@ -8,11 +8,15 @@ import java.text.DecimalFormat;
 public class Calcular {
 
     private Double valor;
-
+    /**
+     * Construtor
+     */
     public Calcular(double valor) {
         this.valor = valor;
     }
-
+    /**
+     * Realiza o calculo
+     */
     public String gasolina(){
         Double res       = valor * 0.7;
         DecimalFormat df = new DecimalFormat("#,###0.000");
