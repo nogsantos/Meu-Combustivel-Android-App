@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Meu Combustível</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_about">Sobre</string>
+    <string name="in_development">Em desenvolvimento</string>
+    <string name="gas_value">O valor da gasolina é R$</string>
+    <string name="calculate">Calcular</string>
+    <string name="clear">Limpar</string>
+    <string name="result">Bom para Etanol quando o valor for menor que:</string>
+    <string name="action_about_title">Calcula combustível</string>
+    <string name="action_about_text">
+        Desenvolvido por Fabricio Nogueira - Email: nogsantos@gmail.com
+    </string>
+    <string name="title_activity_settings">Configurações</string>
+    <string name="title_activity_about">Sobre</string>
+    <string name="value_undefined">Valor indefinido!</string>
+
+</resources>

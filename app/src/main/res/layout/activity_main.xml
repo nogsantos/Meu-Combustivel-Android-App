@@ -10,50 +10,138 @@
     android:id="@+id/mainId"
     android:background="@drawable/bg">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <GridLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Valor da gasolina R$"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/vlGasolina"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:numeric="decimal"
-        android:textStyle="italic"
-        android:maxLength="5"
-        android:textSize="20dp"
-        android:typeface="normal" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:id="@+id/btCalcular"
-        android:layout_toEndOf="@+id/textView"
-        android:singleLine="true"
-        android:typeface="normal"
-        android:width="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/vlGasolina"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/txtResult"
-        android:layout_marginTop="104dp"
-        android:layout_below="@+id/vlGasolina"
         android:layout_alignParentStart="false"
-        android:textAlignment="center"
-    />
+        android:id="@+id/gridLayout">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gas_value"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/vlGasolina"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:numeric="decimal"
+            android:textStyle="italic"
+            android:maxLength="5"
+            android:textSize="20dp"
+            android:typeface="normal"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textAlignment="gravity" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignParentStart="false"
+        android:id="@+id/gridLayout2">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"
+                android:id="@+id/btCalcular"
+                android:layout_toEndOf="@+id/textView"
+                android:singleLine="true"
+                android:typeface="normal"
+                android:layout_below="@+id/vlGasolina"
+                android:layout_alignParentStart="true"
+                android:minHeight="80dp"
+                android:background="#ff87ffab"
+                android:layout_gravity="left"
+                android:textStyle="bold" />
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="@string/clear"
+                android:id="@+id/btLimpar"
+                android:minHeight="80dp"
+                android:background="#fffcff86"
+                android:visibility="invisible"
+                android:layout_gravity="right"
+                android:textStyle="bold" />
+        </GridLayout>
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout2"
+        android:layout_alignParentStart="false"
+        android:id="@+id/gridResult"
+        android:visibility="invisible"
+        android:rowCount="2"
+        android:columnCount="1">
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="left|top">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/result"
+                android:id="@+id/textView2"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="left|top" />
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_gravity="left|top"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtResult"
+                android:layout_below="@+id/vlGasolina"
+                android:layout_alignParentStart="false"
+                android:textAlignment="center"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_gravity="center|fill"
+                android:background="#ff28a3ff"
+                android:textStyle="bold"
+                android:textSize="50dp"
+                android:textColor="#fffffbff" />
+        </GridLayout>
+
+    </GridLayout>
 
 </RelativeLayout>

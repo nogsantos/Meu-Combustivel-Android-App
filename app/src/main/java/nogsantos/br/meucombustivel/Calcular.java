@@ -1,5 +1,11 @@
 package nogsantos.br.meucombustivel;
 
+import android.provider.DocumentsContract;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.lang.annotation.Documented;
 import java.text.DecimalFormat;
 
 /**
@@ -11,7 +17,7 @@ public class Calcular {
     /**
      * Construtor
      */
-    public Calcular(double valor) {
+     Calcular(double valor) {
         this.valor = valor;
     }
     /**
@@ -20,6 +26,9 @@ public class Calcular {
     public String gasolina(){
         Double res       = valor * 0.7;
         DecimalFormat df = new DecimalFormat("#,###0.000");
-        return "Abasteça com Etanol se o valor for menor que R$ " + df.format(res) + " caso contrário, utilize Gasolina!";
+        String html      = "R$ " + df.format(res);
+        Document doc     = Jsoup.parse(html);
+        String text      = doc.body().text();
+        return text;
     }
 }

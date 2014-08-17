@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Meu combustivel</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">My Fuel</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="in_development">In development</string>
+    <string name="gas_value">Gasoline value is R$</string>
+    <string name="calculate">Calculate</string>
+    <string name="clear">Clear</string>
+    <string name="result">Good for Ethanol when value is less then:</string>
+    <string name="title_activity_about">About</string>
+    <string name="action_about">about</string>
+    <string name="action_about_title">Fuel Calculator</string>
+    <string name="action_about_text">
+        Developed by Fabricio Nogueira - e-mail: nogsantos@gmail.com
+    </string>
+    <string name="value_undefined">Undefined value!</string>
 
 </resources>
